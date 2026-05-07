@@ -5,3 +5,5 @@ vendor/
 .DS_Store
 Thumbs.db
 merotheme05-06/
+.env
+.env.*
