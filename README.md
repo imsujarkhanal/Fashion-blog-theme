@@ -1,6 +1,6 @@
 # Fashion Blog Custom WordPress Theme
 
-Fashion Blog is a custom WordPress theme built for a fashion and lifestyle blog. It is based on the Underscores (`_s`) starter theme and extended with custom templates, widgets, layout controls, ACF option pages, and theme-specific styling.
+Fashion Blog is a custom WordPress theme built for a fashion and lifestyle blog. It is based on the Underscores (`_s`) starter theme and extended with custom templates, widgets, layout controls, ACF option pages, and theme-specific styling.Built a custom About page template with static HTML/CSS sections for About, Skills, and Team content. Enabled other pages and posts to use Gutenberg editor content through standard WordPress page/post templates.
 
 ## Overview
 
