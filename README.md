@@ -43,6 +43,24 @@ This theme was developed as a custom WordPress blog theme with a focus on:
 - Organized theme CSS sections
 - WordPress jQuery no-conflict compatibility fix
 
+## Demo Screenshots
+
+### Homepage Hero
+
+![Homepage hero](docs/images/demo-home-hero.png)
+
+### Homepage Blog Layout
+
+![Homepage posts top](docs/images/demo-home-posts-top.png)
+
+### Sidebar Widgets
+
+![Homepage posts and sidebar](docs/images/demo-home-posts-sidebar.png)
+
+### Footer Section
+
+![Footer section](docs/images/demo-footer.png)
+
 ## Theme Structure
 
 ```text
@@ -52,6 +70,7 @@ merotheme/
 │   ├── images/
 │   └── js/
 ├── docs/
+│   ├── images/
 │   └── theme-workflow-and-widgets.md
 ├── inc/
 │   ├── acf-options.php
@@ -230,7 +249,22 @@ docs/theme-workflow-and-widgets.md
 - Font Awesome
 - Advanced Custom Fields
 
+## Copyright And Credits
+
+Copyright (c) 2026 Fashion Blog.
+
+This theme is developed as a custom WordPress fashion blog theme project.
+
+Credits:
+
+- Based on the Underscores (`_s`) WordPress starter theme.
+- Uses Bootstrap for layout support.
+- Uses Font Awesome for icons.
+- Uses Advanced Custom Fields for theme option pages.
+- Demo content and screenshots are included for project presentation purposes.
+
+Unless otherwise noted, custom PHP, CSS, JavaScript, templates, and theme modifications were developed for this project.
+
 ## Author
 
 Developed as a custom WordPress fashion blog theme project.
-
