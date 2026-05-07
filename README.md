@@ -1,70 +1,236 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+# Fashion Blog Custom WordPress Theme
 
-_s
-===
+Fashion Blog is a custom WordPress theme built for a fashion and lifestyle blog. It is based on the Underscores (`_s`) starter theme and extended with custom templates, widgets, layout controls, ACF option pages, and theme-specific styling.
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+## Overview
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+This theme was developed as a custom WordPress blog theme with a focus on:
 
-* A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
-Note: `.no-sidebar` styles are automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+- Fashion and lifestyle blog layouts
+- Dynamic homepage post listing
+- Custom sidebar and footer widgets
+- Inner page hero section
+- Category archive pages
+- Gutenberg-supported page and post content
+- A hand-coded About page template
+- Theme option pages and dashboard cleanup
 
-Installation
----------------
+## Features
 
-### Requirements
+- Custom homepage template with latest posts
+- Category archive template with header, sidebar, content loop, and footer
+- Single post template with comments and AJAX-based like functionality
+- Custom About page template built with HTML and CSS
+- Gutenberg-compatible page and post templates
+- Custom widgets for:
+  - Sidebar position
+  - Inner page hero image
+  - Breadcrumb
+  - Search
+  - Social links
+  - Popular posts
+  - Recent posts
+  - Categories
+  - Tags
+  - Footer contact information
+  - Footer about section
+  - Newsletter block
+- Custom footer widget columns
+- Custom inner page hero section
+- WordPress menu support for header and footer navigation
+- ACF option pages for theme settings
+- Cleaned dashboard menu for unused ACF pages
+- Organized theme CSS sections
+- WordPress jQuery no-conflict compatibility fix
 
-`_s` requires the following dependencies:
+## Theme Structure
 
-- [Node.js](https://nodejs.org/)
-- [Composer](https://getcomposer.org/)
-
-### Quick Start
-
-Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
-
-1. Search for `'_s'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
-2. Search for `_s_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
-3. Search for `Text Domain: _s` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
-5. Search for `_s-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
-6. Search for `_S_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
-
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
-
-### Setup
-
-To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
-
-```sh
-$ composer install
-$ npm install
+```text
+merotheme/
+├── assets/
+│   ├── css/
+│   ├── images/
+│   └── js/
+├── docs/
+│   └── theme-workflow-and-widgets.md
+├── inc/
+│   ├── acf-options.php
+│   ├── custom-header.php
+│   ├── customizer.php
+│   ├── enqueue.php
+│   ├── template-functions.php
+│   └── template-tags.php
+├── template-parts/
+├── 404.php
+├── archive.php
+├── category.php
+├── comments.php
+├── footer.php
+├── front-page.php
+├── functions.php
+├── header.php
+├── index.php
+├── page-about.php
+├── page.php
+├── search.php
+├── sidebar.php
+├── single.php
+└── style.css
 ```
 
-### Available CLI commands
+## Important Templates
 
-`_s` comes packed with CLI commands tailored for WordPress theme development :
+| File | Purpose |
+|---|---|
+| `front-page.php` | Homepage layout with latest posts |
+| `page.php` | Default page template with Gutenberg content |
+| `single.php` | Single blog post layout |
+| `category.php` | Category archive layout |
+| `archive.php` | General archive fallback |
+| `page-about.php` | Custom About page built with HTML/CSS |
+| `header.php` | Site header, logo, menu, search, hero widget area |
+| `footer.php` | Footer widget columns and footer menu |
+| `sidebar.php` | Main sidebar widget area |
+| `comments.php` | Comments and reply form |
+| `functions.php` | Theme setup, widget registration, hooks, AJAX handlers |
 
-- `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
-- `composer lint:php` : checks all PHP files for syntax errors.
-- `composer make-pot` : generates a .pot file in the `languages/` directory.
-- `npm run compile:css` : compiles SASS files to css.
-- `npm run compile:rtl` : generates an RTL stylesheet.
-- `npm run watch` : watches all SASS files and recompiles them to css when they change.
-- `npm run lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
-- `npm run lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
-- `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
+## Custom Widgets
 
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
+The theme includes multiple custom widgets created with WordPress `WP_Widget` classes:
 
-Good luck!
+- `MeroTheme Sidebar Position`
+- `MeroTheme Inner Page Hero`
+- `MeroTheme Breadcrumb`
+- `MeroTheme Search`
+- `MeroTheme Social Links`
+- `MeroTheme Popular Posts`
+- `MeroTheme Recent Posts`
+- `MeroTheme Categories`
+- `MeroTheme Tags`
+- `MeroTheme Footer Contact`
+- `MeroTheme Footer About`
+- `MeroTheme Newsletter`
+
+These widgets can be managed from:
+
+```text
+Appearance > Widgets
+```
+
+## Sidebar Position
+
+The sidebar position is controlled by the custom widget:
+
+```text
+Appearance > Widgets > MeroTheme Sidebar Position
+```
+
+Available options:
+
+- Left sidebar
+- Right sidebar
+
+The selected value is used by the main templates to decide whether the sidebar should appear before or after the content.
+
+## About Page
+
+The About page uses a dedicated custom template:
+
+```text
+page-about.php
+```
+
+Unlike normal pages, this page is built using static HTML and CSS sections for:
+
+- About content
+- Skills
+- Team members
+
+Other pages and posts are designed to use Gutenberg editor content.
+
+## ACF Usage
+
+The theme includes ACF option page registration in:
+
+```text
+inc/acf-options.php
+```
+
+ACF is used for theme settings such as header, footer, social links, and back-to-top options.
+
+Some unused ACF option pages are hidden from the dashboard menu to keep the admin panel cleaner.
+
+## Post Likes
+
+The theme includes an AJAX-based post like feature.
+
+Main parts:
+
+- Like button output in the single post template
+- Like count stored in post meta as `post_likes`
+- AJAX handler in `functions.php`
+- JavaScript behavior in `assets/js/main.js`
+
+The homepage displays the saved like count beside the thumbs-up icon.
+
+## Installation
+
+1. Copy the theme folder into:
+
+```text
+wp-content/themes/
+```
+
+2. Activate the theme from:
+
+```text
+Appearance > Themes
+```
+
+3. Add widgets from:
+
+```text
+Appearance > Widgets
+```
+
+4. Assign menus from:
+
+```text
+Appearance > Menus
+```
+
+5. Configure ACF option pages if ACF/ACF Pro is active.
+
+## Recommended Plugins
+
+- Advanced Custom Fields or ACF Pro
+- Query Monitor for debugging during development
+
+## Development Notes
+
+- Root `style.css` contains the WordPress theme header and base Underscores styles.
+- Main visual styling is in `assets/css/style.css`.
+- Theme scripts are loaded from `inc/enqueue.php`.
+- Widget classes and many theme hooks are currently defined in `functions.php`.
+- Additional workflow documentation is available in:
+
+```text
+docs/theme-workflow-and-widgets.md
+```
+
+## Technologies Used
+
+- WordPress
+- PHP
+- HTML5
+- CSS3
+- JavaScript
+- jQuery
+- Bootstrap
+- Font Awesome
+- Advanced Custom Fields
+
+## Author
+
+Developed as a custom WordPress fashion blog theme project.
+
