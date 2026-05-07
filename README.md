@@ -251,7 +251,7 @@ docs/theme-workflow-and-widgets.md
 
 ## Copyright And Credits
 
-Copyright (c) 2026 Fashion Blog.
+Copyright (c) 2026 Fashion Blog. imsujarkhanal
 
 This theme is developed as a custom WordPress fashion blog theme project.
 
@@ -267,4 +267,4 @@ Unless otherwise noted, custom PHP, CSS, JavaScript, templates, and theme modifi
 
 ## Author
 
-Developed as a custom WordPress fashion blog theme project.
+Sujar Khanal
